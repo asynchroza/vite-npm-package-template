@@ -1,7 +1,7 @@
 {
   "name": "vite-react-package",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,8 +17,14 @@
   "module": "./dist/vite-react-package.js",
   "exports": {
     ".": {
-      "import": "./dist/vite-react-package.js",
-      "require": "./dist/vite-react-package.umd.cjs"
+      "import": {
+        "default": "./dist/vite-react-package.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/vite-react-package.umd.cjs",
+        "types": "./dist/index.d.ts"
+      }
     }
   },
   "types": "./dist/index.d.ts",
